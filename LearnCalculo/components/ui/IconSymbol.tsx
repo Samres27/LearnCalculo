@@ -13,6 +13,8 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'book.fill': 'book', // Icono de libro
+  'graduationcap.fill': 'school', // Icono de gorro de graduado
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

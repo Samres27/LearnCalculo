@@ -19,6 +19,10 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
+        tabBarLabelStyle: {
+          color: Colors.light.color3, // Cambia el color del texto aquí
+          
+        },
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
@@ -31,9 +35,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore2"
         options={{
-          title: "Explore2",
+          title: "Repaso",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={18} name="paperplane.fill" color={color} />
+            <IconSymbol size={18} name="book.fill" color={Colors.light.color3} />
           ),
         }}
       />
@@ -52,9 +56,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: "Explore",
+          title: "Aprendizaje",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={18} name="paperplane.fill" color={color} />
+            <IconSymbol size={18} name="graduationcap.fill" color={Colors.light.color3} />
           ),
         }}
       />
