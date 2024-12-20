@@ -22,7 +22,9 @@ export default function HomeScreen() {
 
       <ScrollView style={styles.chat}>
         {listQuestion.map((item, index)=>(
-          <View style={item.tipo=='respuesta'?styles.bubleResponse : styles.bubleQuest}>
+          <View 
+          key={index}
+          style={item.tipo=='respuesta'?styles.bubleResponse : styles.bubleQuest}>
           <Text style={styles.textQuestion}>{item.texto}</Text>
         </View>
         
