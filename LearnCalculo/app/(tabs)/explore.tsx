@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, useColorScheme, View, Text, ScrollView, TextInput, Pressable } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -6,104 +6,107 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import IconWrapper from '@/components/IconWrapper';
+import { useState } from 'react';
+import { Colors } from '@/constants/Colors';
+import { Int32 } from 'react-native/Libraries/Types/CodegenTypes';
 
 export default function TabTwoScreen() {
+  const colorScheme = useColorScheme();
+  const [questionLabel, setQuestionLabel] = useState("pregunta la cual quienen que contestar");
+  const [listQuest,setListQuest]=useState(["pregunta1","pregunta2","pregunta3","pregunta4"]);
+  const opcionButon=(cosas:Number)=>{
+    console.log(cosas)
+  }
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Custom fonts">
-        <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
+    <View style={styles.container}>
+      <View style={styles.titleQuestionContainer}>
+        <Text style={styles.titleTextQuestion}>{questionLabel}</Text>
+      </View>
+
+      <ScrollView style={styles.chatQuestion}>
+        {listQuest.map((question,index)=>(<Pressable
+          onPress={()=>{opcionButon(index)}}
+            style={styles.questionButton }>
+            <Text style={styles.textQuestion} numberOfLines={1}>{question}</Text>
+          </Pressable>))
+          
+        }
+          
+      </ScrollView>
+
+      
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  container: {
+    flex: 1, // Asegura que el contenedor ocupe toda la pantalla
   },
-  titleContainer: {
-    flexDirection: 'row',
+  titleQuestionContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 30,
     gap: 8,
+    height:"30%"
+  },
+  chatQuestion: {
+    height: "70%", // Ocupa el 70% de la altura de la pantalla
+  },
+  titleTextQuestion: {
+    fontSize: 32,
+    textAlign: "center",
+  },
+  textQuest: {
+    fontSize: 14,
+    width: "70%",
+    flex: 1, // Permite que el texto ocupe todo el espacio disponible
+    flexWrap: "wrap", // Hace que el texto se envuelva si es necesario
+    textAlignVertical: "top", // Evita que el texto se recorte
+    padding: 10
+  },
+  textQuestion: {
+    fontSize: 16,
+    width: "100%",
+    textAlign:"center",
+    margin:"auto",
+  },
+  questionButton: {
+    
+    backgroundColor: Colors.light.color4, // Color de fondo del contenedor
+    height:"25%",
+    borderRadius: 25, // Bordes redondeados
+    width: "90%", // Anchura del contenedor
+    overflow: "hidden", // Corta cualquier contenido que sobresalga
+    margin: 10,
+  },
+  bubleQuest: {
+    borderColor: Colors.light.color5, // Color del borde
+    backgroundColor: "#D9D9D9", // Color de fondo del contenedor
+    borderWidth: 2, // Ancho del borde
+    borderRadius: 10, // Bordes redondeados
+    width: "90%", // Anchura del contenedor
+    justifyContent: "flex-end",
+    overflow: "hidden", // Corta cualquier contenido que sobresalga
+    alignSelf: "flex-end",
+    margin: 10,
+  },
+  Quest: {
+    flexDirection: "row",
+    borderColor: Colors.light.color5, // Color del borde
+    backgroundColor: "#D9D9D9", // Color de fondo del contenedor
+    borderWidth: 2, // Ancho del borde
+    borderRadius: 10, // Bordes redondeados
+    width: "95%", // Anchura del contenedor
+    justifyContent: "space-between",
+    overflow: "hidden", // Corta cualquier contenido que sobresalga
+    alignSelf: "flex-end",
+    margin: 10,
+    alignItems: "center", // Alinea los elementos en la parte superior del contenedor
+    flexWrap: "wrap", // Permite que el contenido se envuelva a la siguiente línea si es necesario
+    gap: 10, // Espacio entre el texto y el ícono
+    padding: 2
   },
 });
