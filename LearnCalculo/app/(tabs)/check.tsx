@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { Colors } from '@/constants/Colors';
 import { Int32 } from 'react-native/Libraries/Types/CodegenTypes';
 
-export default function TabTwoScreen() {
+export default function checkScreen() {
   const colorScheme = useColorScheme();
   const [questionLabel, setQuestionLabel] = useState("pregunta la cual quienen que contestar");
   const [listQuest,setListQuest]=useState(["pregunta1","pregunta2","pregunta3","pregunta4"]);

@@ -33,11 +33,11 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="explore2"
+        name="check"
         options={{
           title: "Repaso",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={18} name="book.fill" color={Colors.light.color3} />
+            <IconSymbol size={15} name="book.fill" color={Colors.light.color3} />
           ),
         }}
       />
@@ -54,11 +54,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="learn"
         options={{
           title: "Aprendizaje",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={18} name="graduationcap.fill" color={Colors.light.color3} />
+            <IconSymbol size={15} name="graduationcap.fill" color={Colors.light.color3} />
           ),
         }}
       />
