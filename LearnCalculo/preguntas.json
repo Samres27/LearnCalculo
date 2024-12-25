@@ -2672,7 +2672,7 @@
         ]
       },
       {
-        "pregunta": "¿Cuál es el dominio de la función \( f(x) = \\frac{1}{x-2} \) ?",
+        "pregunta": "¿Cuál es el dominio de la función ( f(x) = \\frac{1}{x-2} ) ?",
         "Dificultad": 3,
         "respuestas": [
           {
@@ -2755,12 +2755,12 @@
         "respuestas": [
           {
             "id": 1,
-            "text": "Si \( f(-x) = f(x) \) para todo x en su dominio",
+            "text": "Si ( f(-x) = f(x) ) para todo x en su dominio",
             "isCorrect": true
           },
           {
             "id": 2,
-            "text": "Si \( f(-x) = -f(x) \)",
+            "text": "Si ( f(-x) = -f(x) )",
             "isCorrect": false
           },
           {
@@ -2776,7 +2776,7 @@
         ]
       },
       {
-        "pregunta": "¿Cuál es la gráfica de la función constante \( f(x) = 5 \) ?",
+        "pregunta": "¿Cuál es la gráfica de la función constante ( f(x) = 5 ) ?",
         "Dificultad": 3,
         "respuestas": [
           {
@@ -2802,7 +2802,7 @@
         ]
       },
       {
-        "pregunta": "¿Qué tipo de función es \( f(x) = x^3 - 2x + 1 \) ?",
+        "pregunta": "¿Qué tipo de función es ( f(x) = x^3 - 2x + 1 ) ?",
         "Dificultad": 3,
         "respuestas": [
           {
@@ -2878,8 +2878,9 @@
             "isCorrect": false
           }
         ]
-},{
-        "pregunta": "¿Cuál es el rango de la función \( f(x) = \\sqrt{x} \)?",
+},
+{
+        "pregunta": "¿Cuál es el rango de la función ( f(x) = \\sqrt{x} )?",
         "Dificultad": 2,
         "respuestas": [
           {
@@ -2905,7 +2906,7 @@
         ]
       },
       {
-        "pregunta": "Si \( f(x) = x^2 - 4x + 3 \), ¿en qué puntos corta la gráfica al eje X?",
+        "pregunta": "Si ( f(x) = x^2 - 4x + 3 ), ¿en qué puntos corta la gráfica al eje X?",
         "Dificultad": 3,
         "respuestas": [
           {
@@ -2931,7 +2932,7 @@
         ]
       },
       {
-        "pregunta": "¿Qué transforma una función \( f(x) \) en \( f(x+2) \)?",
+        "pregunta": "¿Qué transforma una función ( f(x) ) en ( f(x+2) )?",
         "respuestas": [
           {
             "id": 1,
@@ -2956,7 +2957,7 @@
         ]
       },
       {
-        "pregunta": "¿Qué tipo de función es \( f(x) = \\sin(x) \)?",
+        "pregunta": "¿Qué tipo de función es ( f(x) = \\sin(x) )?",
         "Dificultad": 3,
         "respuestas": [
           {
@@ -3008,7 +3009,7 @@
         ]
       },
       {
-        "pregunta": "Si \( f(x) = x^2 \), ¿cuál es \( f(3) \)?",
+        "pregunta": "Si ( f(x) = x^2 ), ¿cuál es ( f(3) )?",
         "Dificultad": 3,
         "respuestas": [
           {
@@ -3034,7 +3035,7 @@
         ]
       },
       {
-        "pregunta": "Si \( g(x) = 2x + 1 \), ¿cuál es el valor de \( x \) cuando \( g(x) = 7 \)?",
+        "pregunta": "Si ( g(x) = 2x + 1 ), ¿cuál es el valor de ( x ) cuando ( g(x) = 7 )?",
         "Dificultad": 2,
         "respuestas": [
           {
@@ -3060,7 +3061,7 @@
         ]
       },
       {
-        "pregunta": "¿Cuál es la función inversa de \( f(x) = 2x - 4 \)?",
+        "pregunta": "¿Cuál es la función inversa de ( f(x) = 2x - 4 )?",
         "respuestas": [
           {
             "id": 1,
@@ -3085,7 +3086,7 @@
         ]
       },
       {
-        "pregunta": "¿Cuál es el límite de \( f(x) = \\frac{1}{x} \) cuando \( x \to \\infty \)?",
+        "pregunta": "¿Cuál es el límite de ( f(x) = \\frac{1}{x} ) cuando ( x \to \\infty )?",
         "Dificultad": 3,
         "respuestas": [
           {
