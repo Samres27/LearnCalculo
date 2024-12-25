@@ -24,7 +24,7 @@ export default function TabTwoScreen() {
         <Text style={styles.titleTextQuestion}>{questionLabel}</Text>
       </View>
 
-      <ScrollView style={styles.chatQuestion}>
+      <View style={styles.chatQuestion}>
         {listQuest.map((question,index)=>(<Pressable
           onPress={()=>{opcionButon(index)}}
             style={styles.questionButton }>
@@ -33,7 +33,7 @@ export default function TabTwoScreen() {
           
         }
           
-      </ScrollView>
+      </View>
 
       
     </View>
@@ -50,10 +50,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     margin: 30,
     gap: 8,
-    height:"30%"
+    height:"40%"
   },
   chatQuestion: {
-    height: "70%", // Ocupa el 70% de la altura de la pantalla
+    height: "40%", // Ocupa el 70% de la altura de la pantalla
+    alignItems: "center",
   },
   titleTextQuestion: {
     fontSize: 32,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
   questionButton: {
     
     backgroundColor: Colors.light.color4, // Color de fondo del contenedor
-    height:"25%",
+    height:"20%",
     borderRadius: 25, // Bordes redondeados
     width: "90%", // Anchura del contenedor
     overflow: "hidden", // Corta cualquier contenido que sobresalga

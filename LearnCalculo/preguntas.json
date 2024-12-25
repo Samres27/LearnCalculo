@@ -1,0 +1,3141 @@
+[
+  {
+    "area": "Numeros Reales",
+    "preguntas": [
+      {
+        "pregunta": "¿Qué tipo de número es 2098?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Irracional",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Entero",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Racional",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Natural",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la letra que representa al conjunto de números reales?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Q",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Z",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "N",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "R",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la letra que representa al conjunto de números enteros?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Z",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Q",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "R",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "N",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la letra del conjunto de los números racionales?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Q",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "N",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Z",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "R",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Los números reales contienen a los números enteros y a los irracionales.",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "V",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "F",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Los números irracionales poseen cifras decimales periódicas.",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "V",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "F",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Podemos decir que 3 es un número racional y también real.",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "V",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "F",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Los números reales no se pueden ubicar en una recta numérica.",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "V",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "F",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Calcula la siguiente potencia: 16^(3/2)",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "8",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "16",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "64",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "4",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Calcula la siguiente potencia: 8^(2/3)",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "4",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "8",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "9",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Calcula la siguiente potencia: 81^(0.75)",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "9",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "16",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "27",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Calcula la siguiente potencia: 8^(0.3333333)",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "2",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "4",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "8",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "3",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Suma los radicales: 2*(12)^(1/2) - 3(75)^(1/2)+ (27)^(1/2)",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-8*(3)^(1/2)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "-2*(3)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-8*(2)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "+8*(3)^(1/2)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Suma los radicales: (24)^(1/2) - 5(6)^(1/2)+ (486)^(1/2)",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "6*(6)^(1/2)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "2*(3)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "8*(3)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "8*(6)^(1/2)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Racionaliza: 1/((3)^(1/3))",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "(9)^(1/3) / 3",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "(3)^(1/3)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "(18)^(1/3) / 3",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "2(9)^(1/3) / 3",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Suma los radicales: 2*(5)^(1/2) + (45)^(1/2) + (180)^(1/2) - (80)^(1/2)",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "+7*(5)^(1/2)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "-5*(3)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-5*(7)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "-7*(5)^(1/2)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Suma los radicales: (54)^(1/3) - (16)^(1/3) + (250)^(1/3)",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-3*(6)^(1/3)",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "-2*(3)^(1/3)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-6*(2)^(1/3)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "+6*(2)^(1/3)",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Realiza la siguiente operación: ((7)^(1/2) - (2)^(1/2))^(2)",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "9 - 2(14)^(1/2)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "3 - 2(7)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "7 - 3(14)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "2 - 2(14)^(1/2)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Realiza la siguiente operación: (2 - (3)^(1/3))^(2)",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "7 - 4(6)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "-3 - 2(7)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "2 - 4(7)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "7 - 4(3)^(1/2)",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Realiza la siguiente operación: ((5)^(1/2) + 2) * ((5)^(1/2) - 2)",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "1",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "4",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Realiza la siguiente operación: (2(5)^(1/2) + 3(2)^(1/2)) * (2(5)^(1/2) - 3(2)^(1/2))",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "1",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "2",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "4",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Racionaliza: 5/(2*(2)^(1/2))",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "5/2",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "5*(2)^(1/2) / 4",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "(2)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "(2)^(1/2) / 2",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Racionaliza: 2/(3+(3)^(1/2))",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "3 - (3)^(1/3) / 3",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "2 - (3)^(1/3) / 2",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "3 - (2)^(1/3) / 3",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "3 + (3)^(1/3) / 3",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Racionaliza: (2)^(1/2)/((3)^(1/2)-(2)^(1/2))",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "2 + (6)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "6 + (3)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "2 - (3)^(1/2)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "6 - (3)^(1/2)",
+            "isCorrect": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "Derivadas",
+    "preguntas": [
+      {
+        "pregunta": "La derivada de una función en un punto mide:",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La longitud de la curva en ese punto.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La pendiente de la tangente a la curva en ese punto.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "La velocidad de cambio promedio de la función.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "El área bajo la curva entre dos puntos.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si la derivada de una función f(x) en x=c es igual a 0, entonces:",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La función no es continua en x=c.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La función tiene un punto de inflexión en x=c.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "La tangente a la curva en x=c es paralela al eje x.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "La función es creciente en x=c.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál de las siguientes opciones describe correctamente la regla del producto?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "(f⋅g)′ = f′⋅g′",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "(f⋅g)′ = f⋅g′ + g⋅f′",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "(f⋅g)′ = f⋅g′",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "(f⋅g)′ = f′⋅g + f⋅g′",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Si una función f(x) es derivable en un punto c, entonces:",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f(x) siempre es continua en x=c.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "f(x) puede ser discontinua en x=c.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "La derivada en x=c no existe.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f(x) debe tener un punto crítico en x=c.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si y = f(g(x)) ¿cuál es la fórmula para la derivada de y con respecto a x usando la regla de la cadena?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f′(x) ⋅ g′(x)",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f′(g(x)) ⋅ g′(x)",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "g′(f(x)) ⋅ f′(x)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f(g′(x)) ⋅ g′(x)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la derivada de f(x)=c, donde c es una constante?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "1",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "0",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "x",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "c'",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f(x) = mx + b, donde m y b son constantes, ¿cuál es la derivada de f(x)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "b",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "mx",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "m",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "x",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la derivada de f(x) = g(x) + h(x)?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "g′(x) ⋅ h′(x)",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "g′(x) + h′(x)",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "g(x) + h′(x)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "g'(x) - h'(x)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f(x) = c ⋅ g(x), donde c es una constante, ¿cuál es la derivada de f(x)?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "c ⋅ g'(x)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "c ⋅ g(x)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "g'(x)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "c' ⋅ g'(x)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál de las siguientes afirmaciones es correcta?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Si una función es continua, entonces es derivable.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Si una función es derivable, entonces es continua.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Una función puede ser derivable sin ser continua.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "La derivada no está relacionada con la continuidad.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si la derivada de una función f′(x) es igual a cero en x = c, entonces:",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La función f(x) tiene un máximo o un mínimo en x = c.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La función f(x) tiene un punto crítico en x = c.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "La función f(x) es creciente en x = c.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "La derivada de segundo orden también es cero en x = c.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál de las siguientes afirmaciones es cierta?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La derivada de c ⋅ f(x) es f'(x).",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La derivada de c ⋅ f(x) es c ⋅ f'(x), donde c es constante.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "La derivada de c ⋅ f(x) es c' ⋅ f(x) + c ⋅ f'(x).",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "La derivada de c ⋅ f(x) es cc.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Calcula la derivada de: f(x) = 4x^3 − 2x^2 + x − 5",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f′(x) = 12x^2 − 4x + x - 5",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f′(x) = 5x^2 − 4x - 5",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "f′(x) = 8x^3 − 4x + x",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f′(x) = 12x^2 − 4x + 1",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "pregunta": "Calcula la derivada de: f(x) = 2x^4 - 3x^2 + 7",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "8x^3 - 6x + 7",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "8x^3 - 6x",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "2x^3 - 5x + 7",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "8x^3 - 3x^2",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "Aplicación de Derivadas",
+    "preguntas": [
+      {
+        "pregunta": "Si f′(x)>0 en un intervalo, ¿qué podemos concluir sobre f(x)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f(x) es decreciente en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f(x) es constante en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "f(x) es creciente en ese intervalo.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "f(x) tiene un punto crítico en ese intervalo.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué condición deben cumplir los puntos críticos de una función para ser considerados máximos o mínimos locales?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f′(x)=0 o f′(x) no existe.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "f′′(x)=0.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "f(x) es continua.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f(x)>0.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el primer paso para resolver un problema de optimización utilizando derivadas?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Derivar la función objetivo.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Encontrar los valores máximos y mínimos de la función objetivo.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Identificar las restricciones y escribir la función objetivo.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Resolver la ecuación f′′(x)=0.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f′′(x)>0 en un intervalo, entonces:",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f(x) tiene un punto de inflexión en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f(x) es cóncava hacia arriba en ese intervalo.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "f(x) es cóncava hacia abajo en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f(x) tiene un mínimo absoluto en ese intervalo.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si una partícula tiene posición s(t), ¿qué representa s′(t)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La posición de la partícula en el tiempo t.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La velocidad de la partícula en el tiempo t.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "La aceleración de la partícula en el tiempo t.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "La distancia recorrida por la partícula en el tiempo t.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f′(c)=0 y f′′(c)>0, ¿qué podemos concluir sobre c?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f(c) es un mínimo local.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "f(c) es un máximo local.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "f(c) es un punto de inflexión.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "No podemos determinar nada sobre f(c).",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Un punto x=c es un máximo local de f(x) si:",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f'(c) > 0.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f'(c) < 0.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "f'(c) = 0 y f''(c) < 0.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "f'(c) = 0 y f''(c) > 0.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál de las siguientes afirmaciones es verdadera sobre los máximos y mínimos locales?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Todos los puntos críticos son extremos locales.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Un punto crítico puede no ser un máximo o mínimo local.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Los puntos donde f''(x) = 0 siempre son máximos o mínimos locales.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Un máximo local siempre ocurre cuando f'(x) > 0.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "En un problema de máximos y mínimos locales, ¿qué es un punto crítico?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Un punto donde f(x) es continua.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Un punto donde f'(x) = 0 o f'(x) no existe.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Un punto donde f(x) alcanza su valor absoluto más alto.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Un punto donde f''(x) > 0.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f'(x) < 0 en un intervalo, ¿qué ocurre con f(x)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f(x) es creciente en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f(x) es decreciente en ese intervalo.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "f(x) tiene un máximo local en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f(x) tiene un punto crítico en ese intervalo.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Para determinar si una función es creciente o decreciente en un intervalo, es necesario analizar:",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "El signo de f'(x).",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Los valores de f(x).",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "El signo de f''(x).",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Los puntos críticos de f(x).",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f'(x) = 0 en un intervalo completo, ¿qué podemos concluir sobre f(x)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f(x) es creciente en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f(x) es decreciente en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "f(x) es constante en ese intervalo.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "f(x) tiene un punto de inflexión en ese intervalo.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f''(x) > 0 en un intervalo, ¿cómo es la concavidad de f(x) en ese intervalo?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Cóncava hacia abajo.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Cóncava hacia arriba.",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "No tiene concavidad.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "La función es constante.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál de las siguientes afirmaciones es cierta sobre un punto de inflexión?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Es un punto donde f'(x) = 0.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Es un punto donde f(x) alcanza un máximo absoluto.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Es un punto donde f''(x) = 0 y cambia de signo.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Es un punto donde f''(x) > 0.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f''(x) < 0 en un intervalo, ¿qué podemos concluir?",
+       "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La función f(x) es cóncava hacia abajo en ese intervalo.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "La función f(x) es creciente en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "La función f(x) es constante en ese intervalo.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "La función f(x) tiene un mínimo en ese intervalo.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el propósito de usar la prueba de la segunda derivada?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Determinar si una función es continua.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Identificar intervalos de concavidad y puntos de inflexión.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Determinar si los puntos críticos son máximos o mínimos locales.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Identificar valores absolutos máximos y mínimos.",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "Aplicaciones de las Integrales",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuál es el uso de las integrales en diseño industrial?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular el volumen de piezas moldeadas.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Determinar la velocidad de ensamblaje.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Diseñar líneas de producción.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué permite calcular la integral de Fourier?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La representación de una señal periódica.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "La aceleración en sistemas oscilantes.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "El flujo de calor en un objeto.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Para qué se usa la integral en hidráulica?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Estimar la presión promedio en una tubería.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Determinar el flujo turbulento.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Resolver problemas de viscosidad.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿En qué se aplica la integral en ciencias ambientales?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Medir el volumen de agua en embalses.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Analizar la cantidad de carbono en la atmósfera.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Predecir fenómenos climáticos.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Para qué sirve la integral en acústica?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Determinar la energía total de una onda sonora.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Medir la longitud de una onda de presión.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Resolver problemas de reverberación.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es una aplicación de las integrales en química?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular la concentración acumulativa de una reacción.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Medir la densidad de un compuesto.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Estimar el calor específico de un material.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cómo se calcula el área bajo una curva?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Mediante una integral definida.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Usando derivadas parciales.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Resolviendo una suma infinita.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la aplicación de una integral impropia?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Resolver problemas donde los límites son infinitos.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Evaluar tasas de cambio instantáneo.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Analizar funciones periódicas.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Para qué se usan las integrales en la óptica geométrica?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular el trayecto de rayos luminosos en lentes.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Diseñar espejos parabólicos.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Resolver ecuaciones de refracción.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Para qué sirve la integral en sistemas dinámicos?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Determinar el estado futuro de un sistema a partir de ecuaciones diferenciales.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Resolver ecuaciones cuadráticas.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Analizar puntos críticos en sistemas estáticos.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es una aplicación de las integrales en diseño de carreteras?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular pendientes y cambios en elevaciones.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Resolver problemas de tránsito vehicular.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Analizar impactos ambientales.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Para qué se utiliza la integral en análisis estructural?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular fuerzas distribuidas en vigas y columnas.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Determinar el tiempo de vibración de una estructura.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Medir la resistencia al impacto.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿En qué ayuda la integral en el estudio del movimiento armónico?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Determinar la energía total en oscilaciones.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Resolver problemas de frecuencias resonantes.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Analizar sistemas bifurcados.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué permite calcular la integral en termodinámica estadística?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "La energía promedio de un sistema a partir de su distribución.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Resolver ecuaciones de calor latente.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Evaluar la expansión adiabática de gases.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la aplicación de las integrales en finanzas?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular la acumulación de intereses en cuentas continuas.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Resolver problemas de inversión de corto plazo.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Analizar fluctuaciones de monedas.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Para qué se utiliza la integral en dinámica orbital?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Calcular la trayectoria de un satélite alrededor de un planeta.",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Determinar las velocidades críticas de lanzamiento.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Resolver problemas de transferencia de órbitas.",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores.",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "Integrales",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ 5 dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "5x + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "5x^2/2 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "x^5 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "ln(5) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ 2x dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "x^2 + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "2x^2 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "x^2/2 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "2ln(x) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué representa la constante C en una integral indefinida?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "El área bajo la curva",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La constante de integración",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "La derivada",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "El punto de intersección",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ 1/x dx?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "ln|x| + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "1/(2x^2) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "x^-1 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "x + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ cos(x) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "sin(x) + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "-sin(x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "cos(x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "xcos(x) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ e^x dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "e^x + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "e^x/x + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "ln(e^x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "xe^x + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué técnica se utiliza para ∫ xcos(x) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Integración por partes",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Sustitución",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Cambio de variable",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Expansión",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral de ∫ 3x^3 dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "3x^4/4 + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "3x^2 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "ln|x^3| + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "x^4/3 + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral definida de ∫_1^4 1/x dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "ln(4) - ln(1)",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "ln(4) + 1",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "1/4 - 1/1",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "4 - 1",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ sin^2(x) dx?",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "x/2 - sin(2x)/4 + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "sin(x)^2 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "cos(x)/2 + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "x^2 - sin(x) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ 1/√(1 - x^2) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "arcsin(x) + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "arccos(x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "ln(1 - x^2) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "x√(1 - x^2) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ e^(2x)sin(x) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Requiere integración por partes dos veces",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Sustitución simple",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Expansión del integrando",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Fórmulas trigonométricas",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué técnica se usa para ∫ x/(x^2 + 1) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Sustitución",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Integración por partes",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Fracciones parciales",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Expansión polinómica",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de ∫ tan(x) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "ln|sec(x)| + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "sec(x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "ln|cos(x)| + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "sin(x) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral de ∫ x^2e^x dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Integración por partes dos veces",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Sustitución",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Cambio de variable",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Expansión",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral definida de ∫_0^1 xln(x) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-1/4",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "-1/2",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-ln(1)",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "0",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral de ∫ 1/√(x^2 + 1) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "ln|x + √(x^2 + 1)| + C",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "arcsinh(x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "arctan(x) + C",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "√(x^2 + 1) + C",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral de ∫ 1/(x^2 - 4) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Fracciones parciales",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Sustitución trigonométrica",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Integración por partes",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Cambio de variable",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la integral definida de ∫_0^π sin^2(x) dx?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "π/2",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "π",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "0",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "π/4",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+
+{
+    "area": "Límites",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende a un valor 2 de (3x-4)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "4",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "6",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "8",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende al infinito de (5/2)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "5",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "0",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "∞",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "-5",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "si f(x) = x^2 ,¿Cuál es el resultado del límite cuando x tiende a -3 de  ( f(x) )?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-9",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "9",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "0",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende a 0 si (sin(x)/x) ?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "∞",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "1",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "0",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "-1",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende a 1 si ( (x^2 - 1)/(x - 1) )?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "1",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "2",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "0",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "No existe",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f(x) = |x|,¿Cuál es el resultado del límite cuando x tiende 0 si ( f(x) )?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-1",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "1",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "0",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "No existe",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende a ∞ si ( (x^2 +2)/(x^2 +1) )?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "0",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "1",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "∞",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si f(x) = x^1/2, ¿Cuál es el resultado del límite cuando x tiende a 4 si ( f(x) )?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "8",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "0",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "2",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "-2",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende a 0 valor dado ( 1/x )?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "∞",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "0",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-∞",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "1",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el resultado del límite cuando x tiende a ∞ si ( (3x+1)/x )?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "∞",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "1",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "3",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "0",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "Funciones",
+    "preguntas": [
+      {
+        "pregunta": "Sabiendo que representa la funcion. Tiene pendiente -3 y ordenada en el origen -1",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-3x-2",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "3x-3",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-3x-1",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "-3x+2",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Sabiendo que tiene por 4 pendiente y pasa por el punto (−3, 2). A que funcion corresponde",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "x + 5",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "4x + 12",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "4x + 14",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "4x + 20",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Sabiendo que representa la función. Tiene pendiente -3 y ordenada en el origen -1",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-3x-2",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "3x-3",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-3x-1",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "-3x+2",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Sabiendo que tiene por 4 pendiente y pasa por el punto (−3, 2). A qué función corresponde",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "x + 5",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "4x + 12",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "4x + 14",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "4x + 20",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el dominio de la función \( f(x) = \\frac{1}{x-2} \) ?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Todos los reales excepto 2",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Todos los reales excepto 0",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Todos los reales",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué representa geométricamente la pendiente de una función lineal?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "El valor donde corta al eje Y",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "La inclinación de la recta respecto al eje X",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "La distancia al origen",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "El dominio de la función",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué condición deben cumplir dos funciones para que sean inversas entre sí?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Que sus gráficas sean paralelas",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Que la composición de ambas sea la función identidad",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Que tengan el mismo dominio",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Que ambas sean lineales",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cómo se determina si una función es par?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Si \( f(-x) = f(x) \) para todo x en su dominio",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Si \( f(-x) = -f(x) \)",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Si pasa por el origen",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Si es creciente",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la gráfica de la función constante \( f(x) = 5 \) ?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Una línea recta horizontal en y = 5",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Una línea recta que pasa por el origen",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Una parábola",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Una recta vertical en x = 5",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué tipo de función es \( f(x) = x^3 - 2x + 1 \) ?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Una función lineal",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Una función cuadrática",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Una función cúbica",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Una función constante",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué condición cumple la gráfica de una función impar?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Simetría respecto al eje Y",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Simetría respecto al origen",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Simetría respecto a la línea y = x",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "No tiene simetría",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si una función tiene un límite lateral distinto al otro en un punto, ¿cómo se clasifica?",
+        "Dificultad": 1,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Continua",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Discontinua por salto",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Discontinua removible",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Constante",
+            "isCorrect": false
+          }
+        ]
+},{
+        "pregunta": "¿Cuál es el rango de la función \( f(x) = \\sqrt{x} \)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Todos los números reales",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Todos los números reales no negativos",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Todos los números positivos",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Ninguno de los anteriores",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si \( f(x) = x^2 - 4x + 3 \), ¿en qué puntos corta la gráfica al eje X?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "En x = 0 y x = 4",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "En x = 1 y x = 3",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "En x = -1 y x = -3",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "No corta al eje X",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué transforma una función \( f(x) \) en \( f(x+2) \)?",
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Una traslación horizontal hacia la derecha",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Una traslación horizontal hacia la izquierda",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Una traslación vertical hacia arriba",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Una traslación vertical hacia abajo",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué tipo de función es \( f(x) = \\sin(x) \)?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Algebraica",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Trascendente periódica",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Cuadrática",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Creciente",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Qué ocurre con una función si se multiplica por un número negativo?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "Se traslada hacia arriba",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Se refleja respecto al eje X",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "No cambia",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Se traslada hacia abajo",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si \( f(x) = x^2 \), ¿cuál es \( f(3) \)?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "6",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "9",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "12",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si \( g(x) = 2x + 1 \), ¿cuál es el valor de \( x \) cuando \( g(x) = 7 \)?",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "3",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "4",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "5",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es la función inversa de \( f(x) = 2x - 4 \)?",
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "f⁻¹(x) = \\frac{x-4}{2}",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "f⁻¹(x) = \\frac{x+4}{2}",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "f⁻¹(x) = \\frac{2x+4}{2}",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "f⁻¹(x) = \\frac{2x-4}{2}",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el límite de \( f(x) = \\frac{1}{x} \) cuando \( x \to \\infty \)?",
+        "Dificultad": 3,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "1",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "0",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "\\infty",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "-\\infty",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "pregunta": "Si la gráfica de una función pasa por los puntos (1, 2), (2, 4) y (3, 6), ¿cuál podría ser su ecuación?",
+        "Dificultad": 4,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "y = 2x",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "y = x + 2",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "y = x^2",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "y = 3x",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+]
