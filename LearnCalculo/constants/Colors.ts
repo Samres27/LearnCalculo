@@ -18,7 +18,9 @@ export const Colors = {
     color2:"#E9D6AF",
     color3:"#FFFFDD",
     color4:"#C0efd2",
-    color5:"#384252"
+    color5:"#384252",
+    colorCorrect:'#4fb233',
+    colorError:'#ff4c55',
   },
   dark: {
     text: '#ECEDEE',

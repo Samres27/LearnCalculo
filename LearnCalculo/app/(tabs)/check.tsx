@@ -25,15 +25,20 @@ const MAPPING = {
   >
 >;
 
+type ButtonState = {
+  [key: number]: string;
+};
 
 export default function checkScreen() {
 
   const colorScheme = useColorScheme();
   const [titleQuest, setTitleQuest] = useState<string>("");
   const [responseQuest, setResponseQuest] = useState<Array<QuestionObject>>([]);
-  const [indexQuestion, setIndexQuestion] = useState<number>(0);
+  const [indexQuestion, setIndexQuestion] = useState<number>(1);
   const [questionsArray, setQuestionArray] = useState<Array<QuestionFire>>([]);
   const [nextQuest, setNextQuest] = useState(false);
+  const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});  // Estado tipado
+
   var pregunta = {
     "preguntas": [
       {
@@ -62,10 +67,62 @@ export default function checkScreen() {
           }
         ]
       },
+      {
+        "pregunta": "Sabiendo que representa la funcion. Tiene pendiente -3 y ordenada en el gen -1",
+        "Dificultad": 2,
+        "respuestas": [
+          {
+            "id": 1,
+            "text": "-3x",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "3x",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "-3x",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "-3x",
+            "isCorrect": false
+          }
+        ]
+      },
     ]
   }
-  const opcionButon = (cosas: Number) => {
-    console.log(cosas)
+  const opcionButon = (index: number) => {
+    if (!nextQuest){
+      const correct = responseQuest.find((q) => q.isCorrect);
+      const indexCorrect=correct?.id?? -1;  // Si no encuentra, asigna -1
+      
+      if (indexCorrect || indexCorrect != index+1){
+        setSelectedButtons((prev) => {
+          const nextColor= responseQuest[indexCorrect-1].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
+          return { ...prev, [indexCorrect-1]: nextColor };
+        })
+      }
+      setSelectedButtons((prev) => {
+        const nextColor= responseQuest[index].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
+        return { ...prev, [index]: nextColor };
+      });
+      setNextQuest(true);
+  }
+  };
+
+  const sendNext=()=>{
+    if (questionsArray.length>indexQuestion+1){
+      setIndexQuestion(indexQuestion+1);
+      setNextQuest(false);
+      setSelectedButtons({});
+    }else{
+      console.log("no hay siguiente")
+    }
+    
   }
   useEffect(() => {
     setQuestionArray(pregunta.preguntas);  // Carga inicial
@@ -85,20 +142,28 @@ export default function checkScreen() {
       </View>
 
       <View style={styles.chatQuestion}>
-        {responseQuest.map((question, index) => (
+        
+        {responseQuest.map((question, index) => {
+        const color = selectedButtons[index] || 'lightblue';  // Celeste por defecto
+        return (
           <Pressable
             key={index}
-            onPress={() => { opcionButon(index) }}
-            style={styles.questionButton}
+            onPress={() => opcionButon(index)}
+            style={[styles.questionButton, { backgroundColor: color }]}
           >
-            <Text style={styles.textQuestion} numberOfLines={1}>{question.text}</Text>
-          </Pressable>))
-        }
+            <Text style={styles.textQuestion}>
+              {question.text}
+            </Text>
+          </Pressable>
+        );
+      })}
       </View>
-      {/* {nextQuest || */}
-      {
+      {!nextQuest || 
+      
         <View style={styles.nextButton}>
-          <Pressable>
+          <Pressable
+          onPress={sendNext}
+          >
           <AntDesign  name="arrowright" size={24} color="white" />
           </Pressable>
         </View>
@@ -117,7 +182,6 @@ const styles = StyleSheet.create({
     position: 'absolute',  
     bottom: 50,  
     right: 50,  
-    
     alignItems:"center",
     alignContent:"center",
     justifyContent:"center",
