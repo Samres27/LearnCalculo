@@ -54,13 +54,12 @@ export default function checkScreen() {
   
   const opcionButon = (index: number) => {
     if (!nextQuest){
-      const correct = responseQuest.find((q) => q.isCorrect);
-      const indexCorrect=correct?.id?? -1;  // Si no encuentra, asigna -1
-      
-      if (indexCorrect || indexCorrect != index+1){
+      const indexCorrect = responseQuest.findIndex((q) => q.isCorrect)
+      console.log(indexCorrect)
+      if (indexCorrect !==-1  || indexCorrect != index){
         setSelectedButtons((prev) => {
-          const nextColor= responseQuest[indexCorrect-1].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
-          return { ...prev, [indexCorrect-1]: nextColor };
+          const nextColor= responseQuest[indexCorrect].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
+          return { ...prev, [indexCorrect]: nextColor };
         })
       }
       setSelectedButtons((prev) => {
@@ -81,25 +80,65 @@ export default function checkScreen() {
     }
     
   }
-  const getPreguntas = async()=>{
-    const pregunta=await getDoc(doc(db,"preguntas/Funciones"));
+  const getPreguntas = async(idNombre:string)=>{
+    const pregunta=await getDoc(doc(db,"preguntas",idNombre));
     return pregunta
   }
+  const getUser = async(name:string)=>{
+    const user= await getDoc(doc(db,"usuarios",name));
+    return user;
+  }
+  const shuffleArray = (array: any[]) => {
+    
+    return array.sort(() => Math.random() - 0.5);
+  };
+  
   useEffect(() => {
-    const fetchData = async () => {
-      const preguntaSnap = await getPreguntas();
-      
+    const fetchData = async (topic:string,level:number) => { 
+      const preguntaSnap = await getPreguntas(topic);
       if (preguntaSnap.exists()) {
         const data = preguntaSnap.data();
-        setQuestionArray(data.preguntas);  // Carga inicial
+        let dataQuestion = data.preguntas;
+        dataQuestion = dataQuestion.filter((a: QuestionFire) => a.Dificultad == level);
+        const shuffledQuestions = dataQuestion.map((q: QuestionFire) => {
+          return {
+            ...q,
+            respuestas: shuffleArray(q.respuestas)  // Mezcla las respuestas de cada pregunta
+          };
+        });
+      
+        // Añadir al array principal de preguntas
+        setQuestionArray((prevQuestions) => [
+          ...prevQuestions,
+          ...shuffledQuestions
+        ]);
         setIndexQuestion(0);
-        console.log(data.preguntas[0])
+      } else {
+        console.log("No such document!");
+      }
+      
+    };
+    const fetchUser = async (user:string) => { 
+      const usernap = await getUser(user);
+      if (usernap.exists()) {
+        const data = usernap.data();
+        const levels = data.niveles;
+        console.log(levels);
+        if (levels) {
+          for (const [key, value] of Object.entries(levels)) {
+            console.log(key,Number(value))
+            fetchData(key,Number(value))
+          }
+          
+        }
+        
       } else {
         console.log("No such document!");
       }
     };
-  
-    fetchData();
+    
+
+    fetchUser("4Gjmz4lTH20kfCwKAWgt")
   }, []);
 
   useEffect(() => {
