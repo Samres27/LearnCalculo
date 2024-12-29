@@ -1,5 +1,5 @@
 import { StyleSheet, Image, Platform, useColorScheme, View, Text, ScrollView, TextInput, Pressable } from 'react-native';
-
+import { initializeApp } from "firebase/app";
 import { useEffect, useState } from 'react';
 import { Colors } from '@/constants/Colors';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -28,6 +28,18 @@ const MAPPING = {
 type ButtonState = {
   [key: number]: string;
 };
+const firebaseConfig = {
+  apiKey: process.env.USER_API_Firebase,
+  authDomain: "calculando-f8af8.firebaseapp.com",
+  projectId: "calculando-f8af8",
+  storageBucket: "calculando-f8af8.firebasestorage.app",
+  messagingSenderId: "68303837221",
+  appId: "1:68303837221:web:c75000aa388ef9360947cc"
+};
+const app = initializeApp(firebaseConfig);
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";  
+
+const db = getFirestore(app);
 
 export default function checkScreen() {
 
@@ -38,63 +50,8 @@ export default function checkScreen() {
   const [questionsArray, setQuestionArray] = useState<Array<QuestionFire>>([]);
   const [nextQuest, setNextQuest] = useState(false);
   const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});  // Estado tipado
-
-  var pregunta = {
-    "preguntas": [
-      {
-        "pregunta": "Sabiendo que representa la funcion. Tiene pendiente -3 y ordenada en el origen -1",
-        "Dificultad": 2,
-        "respuestas": [
-          {
-            "id": 1,
-            "text": "-3x-2",
-            "isCorrect": false
-          },
-          {
-            "id": 2,
-            "text": "3x-3",
-            "isCorrect": false
-          },
-          {
-            "id": 3,
-            "text": "-3x-1",
-            "isCorrect": true
-          },
-          {
-            "id": 4,
-            "text": "-3x+2",
-            "isCorrect": false
-          }
-        ]
-      },
-      {
-        "pregunta": "Sabiendo que representa la funcion. Tiene pendiente -3 y ordenada en el gen -1",
-        "Dificultad": 2,
-        "respuestas": [
-          {
-            "id": 1,
-            "text": "-3x",
-            "isCorrect": false
-          },
-          {
-            "id": 2,
-            "text": "3x",
-            "isCorrect": false
-          },
-          {
-            "id": 3,
-            "text": "-3x",
-            "isCorrect": true
-          },
-          {
-            "id": 4,
-            "text": "-3x",
-            "isCorrect": false
-          }
-        ]
-      },
-    ]
-  }
+  
+  
   const opcionButon = (index: number) => {
     if (!nextQuest){
       const correct = responseQuest.find((q) => q.isCorrect);
@@ -124,9 +81,25 @@ export default function checkScreen() {
     }
     
   }
+  const getPreguntas = async()=>{
+    const pregunta=await getDoc(doc(db,"preguntas/Funciones"));
+    return pregunta
+  }
   useEffect(() => {
-    setQuestionArray(pregunta.preguntas);  // Carga inicial
-    setIndexQuestion(0);
+    const fetchData = async () => {
+      const preguntaSnap = await getPreguntas();
+      
+      if (preguntaSnap.exists()) {
+        const data = preguntaSnap.data();
+        setQuestionArray(data.preguntas);  // Carga inicial
+        setIndexQuestion(0);
+        console.log(data.preguntas[0])
+      } else {
+        console.log("No such document!");
+      }
+    };
+  
+    fetchData();
   }, []);
 
   useEffect(() => {
