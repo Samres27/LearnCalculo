@@ -14,6 +14,13 @@ interface QuestionFire {
   Dificultad: Number;
   respuestas: Array<QuestionObject>;
 }
+interface requestQuest {
+  topic: string;
+  data: {
+    numero:number;
+    respondidas:number;
+  };
+}
 const MAPPING = {
   'arrowright': 'arrowright.fill',  // Mapea a un nombre válido de MaterialIcons
   'check': 'check_circle',
@@ -48,8 +55,10 @@ export default function checkScreen() {
   const [responseQuest, setResponseQuest] = useState<Array<QuestionObject>>([]);
   const [indexQuestion, setIndexQuestion] = useState<number>(1);
   const [questionsArray, setQuestionArray] = useState<Array<QuestionFire>>([]);
+  const [listNumberQuest,setListNumberQuest]= useState<Array<requestQuest>>([]);
   const [nextQuest, setNextQuest] = useState(false);
-  const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});  // Estado tipado
+  const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});  
+  const [score,setScore]= useState(0);
   
   
   const opcionButon = (index: number) => {
@@ -61,6 +70,28 @@ export default function checkScreen() {
           const nextColor= responseQuest[indexCorrect].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
           return { ...prev, [indexCorrect]: nextColor };
         })
+      }else{
+        setScore((prev)=>{return(prev+1)});
+        const topicQuest = getTopicQuest();
+        if (topicQuest) {
+          const questIndex = listNumberQuest.findIndex(
+            (item) => item.topic === topicQuest.topic
+          );
+        
+          if (questIndex !== -1) {
+            setListNumberQuest((prev) => {
+              const updatedList = [...prev];  // Clona el array
+              updatedList[questIndex] = {
+                ...updatedList[questIndex],  // Clona el objeto que se va a actualizar
+                data: {
+                  ...updatedList[questIndex].data,  // Clona el objeto data
+                  respondidas: updatedList[questIndex].data.respondidas + 1
+                }
+              };
+              return updatedList;
+            });
+          }
+        }
       }
       setSelectedButtons((prev) => {
         const nextColor= responseQuest[index].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
@@ -70,12 +101,33 @@ export default function checkScreen() {
   }
   };
 
+  const setScoreFire=async(name:string)=>{
+    await setDoc(doc(db,"usuarios",name),{"score":score})
+  }
+  const getTopicQuest = () => {
+    let numberQ = 0;
+    let numberR = 0;
+  
+    while (numberQ < listNumberQuest.length) {
+      const current = listNumberQuest[numberQ];
+      
+      if (numberR + current.data.numero > indexQuestion) {
+        return current;  // Retorna todo el objeto en lugar de solo el topic
+      }
+      
+      numberR += current.data.numero;
+      numberQ++;
+    }
+  
+    return null;  // Retorna null si no encuentra coincidencias
+  };
   const sendNext=()=>{
     if (questionsArray.length>indexQuestion+1){
       setIndexQuestion(indexQuestion+1);
       setNextQuest(false);
       setSelectedButtons({});
     }else{
+      setScoreFire("4Gjmz4lTH20kfCwKAWgt");
       console.log("no hay siguiente")
     }
     
@@ -108,6 +160,9 @@ export default function checkScreen() {
         });
       
         // Añadir al array principal de preguntas
+        setListNumberQuest((prev)=>{
+          return [...prev,{"topic":topic,"data":{numero:dataQuestion.length,respondidas:0,}}]
+        })
         setQuestionArray((prevQuestions) => [
           ...prevQuestions,
           ...shuffledQuestions
