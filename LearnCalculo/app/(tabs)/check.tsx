@@ -17,8 +17,8 @@ interface QuestionFire {
 interface requestQuest {
   topic: string;
   data: {
-    numero:number;
-    respondidas:number;
+    numero: number;
+    respondidas: number;
   };
 }
 const MAPPING = {
@@ -44,7 +44,8 @@ const firebaseConfig = {
   appId: "1:68303837221:web:c75000aa388ef9360947cc"
 };
 const app = initializeApp(firebaseConfig);
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";  
+import { getFirestore, doc, setDoc, getDoc, updateDoc, increment } from "firebase/firestore";
+import { string } from 'cohere-ai/core/schemas';
 
 const db = getFirestore(app);
 
@@ -55,29 +56,29 @@ export default function checkScreen() {
   const [responseQuest, setResponseQuest] = useState<Array<QuestionObject>>([]);
   const [indexQuestion, setIndexQuestion] = useState<number>(1);
   const [questionsArray, setQuestionArray] = useState<Array<QuestionFire>>([]);
-  const [listNumberQuest,setListNumberQuest]= useState<Array<requestQuest>>([]);
+  const [listNumberQuest, setListNumberQuest] = useState<Array<requestQuest>>([]);
   const [nextQuest, setNextQuest] = useState(false);
-  const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});  
-  const [score,setScore]= useState(0);
-  
-  
+  const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});
+  const [score, setScore] = useState(0);
+  const [userName,setUserName]=useState("4Gjmz4lTH20kfCwKAWgt");
+
   const opcionButon = (index: number) => {
-    if (!nextQuest){
+    if (!nextQuest) {
       const indexCorrect = responseQuest.findIndex((q) => q.isCorrect)
       console.log(indexCorrect)
-      if (indexCorrect !==-1  || indexCorrect != index){
+      if (indexCorrect !== -1 || indexCorrect != index) {
         setSelectedButtons((prev) => {
-          const nextColor= responseQuest[indexCorrect].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
+          const nextColor = responseQuest[indexCorrect].isCorrect ? Colors.light.colorCorrect : Colors.light.colorError
           return { ...prev, [indexCorrect]: nextColor };
         })
-      }else{
-        setScore((prev)=>{return(prev+1)});
+      } else {
+        setScore((prev) => { return (prev + 1) });
         const topicQuest = getTopicQuest();
         if (topicQuest) {
           const questIndex = listNumberQuest.findIndex(
             (item) => item.topic === topicQuest.topic
           );
-        
+
           if (questIndex !== -1) {
             setListNumberQuest((prev) => {
               const updatedList = [...prev];  // Clona el array
@@ -94,59 +95,80 @@ export default function checkScreen() {
         }
       }
       setSelectedButtons((prev) => {
-        const nextColor= responseQuest[index].isCorrect?Colors.light.colorCorrect : Colors.light.colorError
+        const nextColor = responseQuest[index].isCorrect ? Colors.light.colorCorrect : Colors.light.colorError
         return { ...prev, [index]: nextColor };
       });
       setNextQuest(true);
-  }
+    }
   };
 
-  const setScoreFire=async(name:string)=>{
-    await setDoc(doc(db,"usuarios",name),{"score":score})
+  const setScoreFire = async (name: string) => {
+    await setDoc(doc(db, "usuarios", name), { "score": score })
+  }
+
+  const updateLevel = async (name: string, nivel: string) => {
+    const userRef = doc(db, "usuarios", name);  // Referencia al documento del usuario
+
+    try {
+      await updateDoc(userRef, {
+        [`niveles.${nivel}`]: increment(1)  // Actualización del campo anidado
+      });
+      console.log("Nivel actualizado correctamente");
+    } catch (error) {
+      console.error("Error actualizando nivel:", error);
+    }
+  }
+  const updateLevels = async () => {
+    listNumberQuest.forEach(element => {
+      if (element.data.numero == element.data.respondidas){
+        updateLevel(userName,element.topic)
+      }
+    });
   }
   const getTopicQuest = () => {
     let numberQ = 0;
     let numberR = 0;
-  
+
     while (numberQ < listNumberQuest.length) {
       const current = listNumberQuest[numberQ];
-      
+
       if (numberR + current.data.numero > indexQuestion) {
         return current;  // Retorna todo el objeto en lugar de solo el topic
       }
-      
+
       numberR += current.data.numero;
       numberQ++;
     }
-  
+
     return null;  // Retorna null si no encuentra coincidencias
   };
-  const sendNext=()=>{
-    if (questionsArray.length>indexQuestion+1){
-      setIndexQuestion(indexQuestion+1);
+  const sendNext = () => {
+    if (questionsArray.length > indexQuestion + 1) {
+      setIndexQuestion(indexQuestion + 1);
       setNextQuest(false);
       setSelectedButtons({});
-    }else{
-      setScoreFire("4Gjmz4lTH20kfCwKAWgt");
+    } else {
+      setScoreFire(userName);
+      updateLevels();
       console.log("no hay siguiente")
     }
-    
+
   }
-  const getPreguntas = async(idNombre:string)=>{
-    const pregunta=await getDoc(doc(db,"preguntas",idNombre));
+  const getPreguntas = async (idNombre: string) => {
+    const pregunta = await getDoc(doc(db, "preguntas", idNombre));
     return pregunta
   }
-  const getUser = async(name:string)=>{
-    const user= await getDoc(doc(db,"usuarios",name));
+  const getUser = async (name: string) => {
+    const user = await getDoc(doc(db, "usuarios", name));
     return user;
   }
   const shuffleArray = (array: any[]) => {
-    
+
     return array.sort(() => Math.random() - 0.5);
   };
-  
+
   useEffect(() => {
-    const fetchData = async (topic:string,level:number) => { 
+    const fetchData = async (topic: string, level: number) => {
       const preguntaSnap = await getPreguntas(topic);
       if (preguntaSnap.exists()) {
         const data = preguntaSnap.data();
@@ -158,10 +180,10 @@ export default function checkScreen() {
             respuestas: shuffleArray(q.respuestas)  // Mezcla las respuestas de cada pregunta
           };
         });
-      
+
         // Añadir al array principal de preguntas
-        setListNumberQuest((prev)=>{
-          return [...prev,{"topic":topic,"data":{numero:dataQuestion.length,respondidas:0,}}]
+        setListNumberQuest((prev) => {
+          return [...prev, { "topic": topic, "data": { numero: dataQuestion.length, respondidas: 0, } }]
         })
         setQuestionArray((prevQuestions) => [
           ...prevQuestions,
@@ -171,9 +193,9 @@ export default function checkScreen() {
       } else {
         console.log("No such document!");
       }
-      
+
     };
-    const fetchUser = async (user:string) => { 
+    const fetchUser = async (user: string) => {
       const usernap = await getUser(user);
       if (usernap.exists()) {
         const data = usernap.data();
@@ -181,19 +203,19 @@ export default function checkScreen() {
         console.log(levels);
         if (levels) {
           for (const [key, value] of Object.entries(levels)) {
-            console.log(key,Number(value))
-            fetchData(key,Number(value))
+            console.log(key, Number(value))
+            fetchData(key, Number(value))
           }
-          
+
         }
-        
+
       } else {
         console.log("No such document!");
       }
     };
-    
 
-    fetchUser("4Gjmz4lTH20kfCwKAWgt")
+
+    fetchUser(userName)
   }, []);
 
   useEffect(() => {
@@ -209,29 +231,29 @@ export default function checkScreen() {
       </View>
 
       <View style={styles.chatQuestion}>
-        
+
         {responseQuest.map((question, index) => {
-        const color = selectedButtons[index] || 'lightblue';  // Celeste por defecto
-        return (
-          <Pressable
-            key={index}
-            onPress={() => opcionButon(index)}
-            style={[styles.questionButton, { backgroundColor: color }]}
-          >
-            <Text style={styles.textQuestion}>
-              {question.text}
-            </Text>
-          </Pressable>
-        );
-      })}
+          const color = selectedButtons[index] || 'lightblue';  // Celeste por defecto
+          return (
+            <Pressable
+              key={index}
+              onPress={() => opcionButon(index)}
+              style={[styles.questionButton, { backgroundColor: color }]}
+            >
+              <Text style={styles.textQuestion}>
+                {question.text}
+              </Text>
+            </Pressable>
+          );
+        })}
       </View>
-      {!nextQuest || 
-      
+      {!nextQuest ||
+
         <View style={styles.nextButton}>
           <Pressable
-          onPress={sendNext}
+            onPress={sendNext}
           >
-          <AntDesign  name="arrowright" size={24} color="white" />
+            <AntDesign name="arrowright" size={24} color="white" />
           </Pressable>
         </View>
       }
@@ -245,19 +267,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, // Asegura que el contenedor ocupe toda la pantalla
   },
-  nextButton:{
-    position: 'absolute',  
-    bottom: 50,  
-    right: 50,  
-    alignItems:"center",
-    alignContent:"center",
-    justifyContent:"center",
-    borderRadius:"10%",
-    height:50,
-    width:50,
-    backgroundColor:Colors.light.color5,
-    alignSelf:"flex-end",
-    
+  nextButton: {
+    position: 'absolute',
+    bottom: 50,
+    right: 50,
+    alignItems: "center",
+    alignContent: "center",
+    justifyContent: "center",
+    borderRadius: "10%",
+    height: 50,
+    width: 50,
+    backgroundColor: Colors.light.color5,
+    alignSelf: "flex-end",
+
   },
   titleQuestionContainer: {
     flexDirection: "row",
