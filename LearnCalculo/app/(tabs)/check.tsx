@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { Colors } from '@/constants/Colors';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { AntDesign } from '@expo/vector-icons';
+import { ActivityIndicator } from 'react-native';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 interface QuestionObject {
   id: number;
   text: string;
@@ -47,6 +49,7 @@ const app = initializeApp(firebaseConfig);
 import { getFirestore, doc, setDoc, getDoc, updateDoc, increment } from "firebase/firestore";
 import { string } from 'cohere-ai/core/schemas';
 
+
 const db = getFirestore(app);
 
 export default function checkScreen() {
@@ -60,45 +63,48 @@ export default function checkScreen() {
   const [nextQuest, setNextQuest] = useState(false);
   const [selectedButtons, setSelectedButtons] = useState<ButtonState>({});
   const [score, setScore] = useState(0);
-  const [userName,setUserName]=useState("4Gjmz4lTH20kfCwKAWgt");
+  const [userName, setUserName] = useState("4Gjmz4lTH20kfCwKAWgt");
+  const [stateLoad, setStateLoad] = useState(false);
 
   const opcionButon = (index: number) => {
     if (!nextQuest) {
       const indexCorrect = responseQuest.findIndex((q) => q.isCorrect)
-      console.log(indexCorrect)
-      if (indexCorrect !== -1 || indexCorrect != index) {
+      console.log(indexCorrect,index)
+      if (indexCorrect !== -1 && indexCorrect !== index) {
         setSelectedButtons((prev) => {
           const nextColor = responseQuest[indexCorrect].isCorrect ? Colors.light.colorCorrect : Colors.light.colorError
           return { ...prev, [indexCorrect]: nextColor };
         })
+        console.log("incorrecto,respuesta")
       } else {
         setScore((prev) => { return (prev + 1) });
         const topicQuest = getTopicQuest();
+        console.log("correcto,respuesta")
         if (topicQuest) {
           const questIndex = listNumberQuest.findIndex(
             (item) => item.topic === topicQuest.topic
           );
-
+          console.log("encontro el topico,respuesta")
           if (questIndex !== -1) {
             setListNumberQuest((prev) => {
               if (questIndex < 0 || questIndex >= prev.length) return prev;  // Validación de índice
-            
+
               // Clonar y actualizar el elemento
               const updatedList = prev.map((item, index) =>
                 index === questIndex
                   ? {
-                      ...item,
-                      data: {
-                        ...item.data,
-                        respondidas: item.data.respondidas + 1,
-                      },
-                    }
+                    ...item,
+                    data: {
+                      ...item.data,
+                      respondidas: item.data.respondidas + 1,
+                    },
+                  }
                   : item
               );
-            
+              
               return updatedList;
             });
-            
+
           }
         }
       }
@@ -110,33 +116,47 @@ export default function checkScreen() {
     }
   };
 
-  const setScoreFire = async (name: string) => {
-    await setDoc(doc(db, "usuarios", name), { "score": score })
-  }
+  
 
   const updateLevel = async (name: string, nivel: string) => {
-    const userRef = doc(db, "usuarios", name);  // Referencia al documento del usuario
-
+    const userRef = doc(db, "usuarios", name);
+  
     try {
-      await updateDoc(userRef, {
-        [`niveles.${nivel}`]: increment(1)  // Actualización del campo anidado
-      });
-      console.log("Nivel actualizado correctamente");
+      // 1. Obtener el documento actual
+      const userSnap = await getDoc(userRef);
+      if (userSnap.exists()) {
+        const currentData = userSnap.data().niveles || {};
+  
+        // 2. Incrementar solo el nivel específico
+        const newLevel = (currentData[nivel] || 0) + 1;
+  
+        // 3. Actualizar solo ese campo sin borrar los demás
+        await updateDoc(userRef, {
+          [`niveles.${nivel}`]: newLevel
+        });
+  
+        console.log(`Nivel actualizado correctamente: ${nivel} -> ${newLevel}`);
+      } else {
+        console.log("Usuario no encontrado");
+      }
     } catch (error) {
       console.error("Error actualizando nivel:", error);
     }
-  }
+  };
+  
+  
   const updateLevels = async () => {
     console.log(listNumberQuest);
-    
+
     for (const element of listNumberQuest) {
       if (element.data.numero === element.data.respondidas) {
         await updateLevel(userName, element.topic);  // Esperar a que se complete cada actualización
+        console.log("actualizado el topico",element.topic)
       }
       console.log(element.topic)
     }
   };
-  
+
   const getTopicQuest = () => {
     let numberQ = 0;
     let numberR = 0;
@@ -160,9 +180,8 @@ export default function checkScreen() {
       setNextQuest(false);
       setSelectedButtons({});
     } else {
-      setScoreFire(userName);
       updateLevels();
-      console.log(listNumberQuest)
+      console.log("numero de cuestiones",listNumberQuest)
       console.log("no hay siguiente")
     }
 
@@ -203,6 +222,7 @@ export default function checkScreen() {
           ...shuffledQuestions
         ]);
         setIndexQuestion(0);
+        //console.log("cargado en la base de datos",shuffledQuestions,dataQuestion)
       } else {
         console.log("No such document!");
       }
@@ -227,54 +247,72 @@ export default function checkScreen() {
       }
     };
 
-
-    fetchUser(userName)
-    console.log(questionsArray)
+    const fetchAllData = async () => {
+      try {
+        await fetchUser(userName);  // Espera a que se carguen los datos del usuario y las preguntas
+      } catch (error) {
+        console.error("Error al cargar datos:", error);
+      }
+    };
+    
+    fetchAllData();
+    console.log(questionsArray, responseQuest)
+    
+    
   }, []);
 
   useEffect(() => {
+    //console.log(questionsArray,"llamada a preguntas")
     if (questionsArray.length > 0) {
       setTitleQuest(questionsArray[indexQuestion]?.pregunta || '');  // ? para evitar errores si es undefined
       setResponseQuest(questionsArray[indexQuestion]?.respuestas || []);
+      setStateLoad(true);
     }
-  }, [indexQuestion]);  // Elimina questionsArray de la dependencia
-  return (
-    <View style={styles.container}>
-      <View style={styles.titleQuestionContainer}>
-        <Text style={styles.titleTextQuestion}>{titleQuest}</Text>
-      </View>
-
-      <View style={styles.chatQuestion}>
-
-        {responseQuest.map((question, index) => {
-          const color = selectedButtons[index] || 'lightblue';  // Celeste por defecto
-          return (
-            <Pressable
-              key={index}
-              onPress={() => opcionButon(index)}
-              style={[styles.questionButton, { backgroundColor: color }]}
-            >
-              <Text style={styles.textQuestion}>
-                {question.text}
-              </Text>
-            </Pressable>
-          );
-        })}
-      </View>
-      {!nextQuest ||
-
-        <View style={styles.nextButton}>
-          <Pressable
-            onPress={sendNext}
-          >
-            <AntDesign name="arrowright" size={24} color="white" />
-          </Pressable>
+  }, [questionsArray, indexQuestion]);  
+  if (stateLoad) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.titleQuestionContainer}>
+          <Text style={styles.titleTextQuestion}>{titleQuest}</Text>
         </View>
-      }
 
+        <View style={styles.chatQuestion}>
 
-    </View>
-  );
+          {responseQuest.map((question, index) => {
+            const color = selectedButtons[index] || 'lightblue';  // Celeste por defecto
+            return (
+              <Pressable
+                key={index}
+                onPress={() => opcionButon(index)}
+                style={[styles.questionButton, { backgroundColor: color }]}
+              >
+                <Text style={styles.textQuestion}>
+                  {question.text}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
+        {!nextQuest ||
+
+          <View style={styles.nextButton}>
+            <Pressable
+              onPress={sendNext}
+            >
+              <AntDesign name="arrowright" size={24} color="white" />
+            </Pressable>
+          </View>
+        }
+      </View>
+
+    );
+  } else {
+    return (<SafeAreaProvider>
+      <SafeAreaView style={[styles.containerx, styles.horizontal]}>
+        <ActivityIndicator size="large" />
+      </SafeAreaView>
+    </SafeAreaProvider>)
+  }
 }
 
 const styles = StyleSheet.create({
@@ -360,5 +398,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap", // Permite que el contenido se envuelva a la siguiente línea si es necesario
     gap: 10, // Espacio entre el texto y el ícono
     padding: 2
+  },
+  containerx: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
   },
 });
