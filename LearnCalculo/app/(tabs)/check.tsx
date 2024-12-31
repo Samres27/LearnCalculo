@@ -81,16 +81,24 @@ export default function checkScreen() {
 
           if (questIndex !== -1) {
             setListNumberQuest((prev) => {
-              const updatedList = [...prev];  // Clona el array
-              updatedList[questIndex] = {
-                ...updatedList[questIndex],  // Clona el objeto que se va a actualizar
-                data: {
-                  ...updatedList[questIndex].data,  // Clona el objeto data
-                  respondidas: updatedList[questIndex].data.respondidas + 1
-                }
-              };
+              if (questIndex < 0 || questIndex >= prev.length) return prev;  // Validación de índice
+            
+              // Clonar y actualizar el elemento
+              const updatedList = prev.map((item, index) =>
+                index === questIndex
+                  ? {
+                      ...item,
+                      data: {
+                        ...item.data,
+                        respondidas: item.data.respondidas + 1,
+                      },
+                    }
+                  : item
+              );
+            
               return updatedList;
             });
+            
           }
         }
       }
@@ -119,12 +127,16 @@ export default function checkScreen() {
     }
   }
   const updateLevels = async () => {
-    listNumberQuest.forEach(element => {
-      if (element.data.numero == element.data.respondidas){
-        updateLevel(userName,element.topic)
+    console.log(listNumberQuest);
+    
+    for (const element of listNumberQuest) {
+      if (element.data.numero === element.data.respondidas) {
+        await updateLevel(userName, element.topic);  // Esperar a que se complete cada actualización
       }
-    });
-  }
+      console.log(element.topic)
+    }
+  };
+  
   const getTopicQuest = () => {
     let numberQ = 0;
     let numberR = 0;
@@ -150,6 +162,7 @@ export default function checkScreen() {
     } else {
       setScoreFire(userName);
       updateLevels();
+      console.log(listNumberQuest)
       console.log("no hay siguiente")
     }
 
@@ -216,6 +229,7 @@ export default function checkScreen() {
 
 
     fetchUser(userName)
+    console.log(questionsArray)
   }, []);
 
   useEffect(() => {
