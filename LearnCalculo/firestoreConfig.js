@@ -1,6 +1,4 @@
 const { initializeApp } = require("firebase/app");
-
-
 const firebaseConfig = {
     apiKey:process.env.EXPO_PUBLIC_USER_API_Firebase2 ,
   
@@ -16,8 +14,7 @@ const firebaseConfig = {
   
   };
   
-  
-  
+  console.log(process.env.EXPO_PUBLIC_USER_API_Firebase2)
   
   // const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
   
