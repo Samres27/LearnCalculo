@@ -17,16 +17,7 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import ProgressBar from "@/components/ui/Linebar";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-
-const firebaseConfig = {
-  apiKey: process.env.USER_API_Firebase,
-  authDomain: "calculando-f8af8.firebaseapp.com",
-  projectId: "calculando-f8af8",
-  storageBucket: "calculando-f8af8.firebasestorage.app",
-  messagingSenderId: "68303837221",
-  appId: "1:68303837221:web:c75000aa388ef9360947cc"
-};
-const app = initializeApp(firebaseConfig);
+import {app} from "@/firestoreConfig"
 const db = getFirestore(app);
 
 interface topic{

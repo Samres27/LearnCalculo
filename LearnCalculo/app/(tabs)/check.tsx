@@ -37,15 +37,7 @@ const MAPPING = {
 type ButtonState = {
   [key: number]: string;
 };
-const firebaseConfig = {
-  apiKey: process.env.USER_API_Firebase,
-  authDomain: "calculando-f8af8.firebaseapp.com",
-  projectId: "calculando-f8af8",
-  storageBucket: "calculando-f8af8.firebasestorage.app",
-  messagingSenderId: "68303837221",
-  appId: "1:68303837221:web:c75000aa388ef9360947cc"
-};
-const app = initializeApp(firebaseConfig);
+import {app} from "@/firestoreConfig"
 import { getFirestore, doc, setDoc, getDoc, updateDoc, increment } from "firebase/firestore";
 import { string } from 'cohere-ai/core/schemas';
 
